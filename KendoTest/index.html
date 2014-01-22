@@ -98,6 +98,84 @@
 
     </div>
 
+    <div id="tabstrip-visit"
+        data-role="view"
+        data-title="Request a Visit"
+        data-model="app.weatherService.viewModel">
+
+        
+        <form data-bind="events: { keyup: checkEnter }">
+                <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                    <li>
+                        <label>
+                            First Name:
+                                <input type="text" data-bind="value: firstname" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Last Name:
+                                <input type="text" data-bind="value: lastname" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Last Name:
+                                <input type="text" data-bind="value: lastname" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Date of Birth:
+                                <input type="text" data-bind="value: dateofbirth" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Address:
+                                <input type="text" data-bind="value: address" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            City:
+                                <input type="text" data-bind="value: city" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Postal Code:
+                                <input type="text" data-bind="value: postalcode" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            OHIP:
+                                <input type="text" data-bind="value: ohip" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Comment:
+                                <input type="text" data-bind="value: comment" />
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="buttonArea">
+                    <input type="submit" id="btn-send" data-role="button" data-bind="click: sendRequest" class="login-button" value="Send Request" />
+                </div>
+            </form>
+       
+
+            <div class="separator">
+                <div class="dark"></div>
+                <div class="light"></div>
+            </div>
+
+        </div>
+    </div>
+    
     <!--Weather-->
     <div id="tabstrip-weather"
         data-role="view"
@@ -152,7 +230,7 @@
                 <a href="#tabstrip-home" data-icon="home">Home</a>
                 <a href="#tabstrip-login" data-icon="contacts">Login</a>
                 <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
+                <a href="#tabstrip-visit" data-icon="globe">Visit</a>
             </div>
         </div>
     </div>
