@@ -15,6 +15,7 @@
     <script src="scripts/location.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/app.js"></script>
+	<script src="scripts/visit.js"></script>    
 
 </head>
 <body>
@@ -101,7 +102,7 @@
     <div id="tabstrip-visit"
         data-role="view"
         data-title="Request a Visit"
-        data-model="app.weatherService.viewModel">
+        data-model="app.visitService.viewModel">
 
         
         <form data-bind="events: { keyup: checkEnter }">
@@ -110,12 +111,6 @@
                         <label>
                             First Name:
                                 <input type="text" data-bind="value: firstname" />
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            Last Name:
-                                <input type="text" data-bind="value: lastname" />
                         </label>
                     </li>
                     <li>
@@ -174,6 +169,19 @@
             </div>
 
         </div>
+    </div>
+    
+    <div id="visit-success"
+         data-role="view"
+        data-title="Weather"
+        data-model="app.visitService.viewModel">
+
+        <h1>Success!</h1>
+        <p>
+            Your request has been successfully sent. We will contact you soo to confirm.
+        </p>
+        Your first name: <input type="text" data-bind="value: firstname" />
+        
     </div>
     
     <!--Weather-->
